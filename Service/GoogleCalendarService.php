@@ -48,7 +48,7 @@ class GoogleCalendarService
         $credentials = new \Google_Auth_AssertionCredentials(
             $this->parameters['client_email'],
             array($this->parameters['api_url']),
-            file_get_contents($this->container->get('kernel')->getRootDir() . "/" . $this->parameters['api_key_file'])
+            file_get_contents($this->container->get('kernel')->getRootDir() . "/../" . $this->parameters['api_key_file'])
         );
 
         $client = new \Google_Client();
